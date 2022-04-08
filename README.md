@@ -12,5 +12,5 @@
 
 ## Credits
 
-GitHub: https://github.com/fcarroll12/effective_work_calendar
-Live URL: https://fcarroll12.github.io/effective_work_calendar/
+ https://github.com/fcarroll12/effective_work_calendar
+ https://fcarroll12.github.io/effective_work_calendar/
