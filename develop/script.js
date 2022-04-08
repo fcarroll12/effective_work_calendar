@@ -1,6 +1,6 @@
 var today = moment().format("dddd, MMMM Do YYYY");
 $("#currentDay").text(today);
-console.log(today);
+
 
 var hour = document.querySelectorAll ('.hour');
 var presentTime = moment().hour("H");
@@ -9,6 +9,7 @@ console.log(presentTime);
 
 for (var i = 0; i <= idHour; i++) {
     console.log(idHour[i].textContent)
+    
     if (presentTime === idHour) {
         $(idHour).addClass("present");
         idHour.children('.description').children().css('background-color', 'green');
