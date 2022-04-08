@@ -4,37 +4,24 @@ console.log(today);
 
 var hour = document.querySelectorAll ('.hour');
 var presentTime = moment().hour("H");
-var idHour = "hour- " + "";
-var i = 0
+var idHour = ".hour- ";
 console.log(presentTime);
 
-for (var i = 9; i <= idHour; i++) {
+for (var i = 0; i <= idHour; i++) {
     console.log(idHour[i].textContent)
     if (presentTime === idHour) {
         $(idHour).addClass("present");
+        idHour.children('.description').children().css('background-color', 'green');
     }
     else if  (presentTime < idHour) {
         $(idHour).addClass("past");
+        idHour.children('.description').children().css('background-color', 'grey');
     } 
     else {
         $(idHour).addClass("future");
+        idHour.children('.description').children().css('background-color', 'red');
     }
 }
-
-
-
-
-//     if (presentTime === idHour) {
-//         backgroundColor(idHour, "red");
-
-//     } else if (presentTime < idHour) {
-//         backgroundColor(idHour,"grey");
-
-//     } else (presentTime> idHour) 
-//         backgroundColor(idHour,"green");
-    
-
-
 
 
 //track current time in calendar 
@@ -51,9 +38,9 @@ var saveBtn = $('.saveBtn');
 
 
 var description = workHours;
-var count = JSON.parse(localStorage.getItem("count"));
+var column = (localStorage.getItem("col"));
 
-description.textContent = count;
+description.textContent = column;
 
 saveBtn.on('click', function () {
     var button = $(this);
@@ -62,7 +49,7 @@ saveBtn.on('click', function () {
     var id = button.closest(description).attr('id');
     console.log(id);
     console.log(description); 
-    localStorage.setItem(id, description);
+    localStorage.setItem(id, description, column);
     event.preventDefault();
 })
 
