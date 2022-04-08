@@ -3,13 +3,27 @@ $("#currentDay").text(today);
 console.log(today);
 
 var hour = document.querySelectorAll ('.hour');
-var presentTime = moment().format("H");
+var presentTime = moment().hour("H");
 var idHour = "hour- " + "";
 var i = 0
+console.log(presentTime);
 
-// for (var i = 0; i <= idHour; i++) {
-//     console.log(idHour[i].textContent)
-// }
+for (var i = 9; i <= idHour; i++) {
+    console.log(idHour[i].textContent)
+    if (presentTime === idHour) {
+        $(idHour).addClass("present");
+    }
+    else if  (presentTime < idHour) {
+        $(idHour).addClass("past");
+    } 
+    else {
+        $(idHour).addClass("future");
+    }
+}
+
+
+
+
 //     if (presentTime === idHour) {
 //         backgroundColor(idHour, "red");
 
@@ -56,4 +70,4 @@ saveBtn.on('click', function () {
 
 //attribute to use as key: use the id and DOM Traversal to set item in local storage
 //when page is refreshed the saved event stays on page
-//prevent the page from auto default 
+//prevent the page from auto default using event.preventDefault
