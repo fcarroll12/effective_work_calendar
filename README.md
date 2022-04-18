@@ -6,9 +6,14 @@
 
 
 ## Usage
-    ```md
-    ![alt text](assets/images/screenshot.jpg)
-    ```
+TECHNOLOGIES USED: 
+HTML,
+Javascript,
+JQuery,
+CSS 
+
+(assets/images/screenshot.jpg)
+    
 
 ## Credits
 
