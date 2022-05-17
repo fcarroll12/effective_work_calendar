@@ -12,7 +12,7 @@ Javascript,
 JQuery,
 CSS 
 
-(assets/images/screenshot.jpg)
+![alt text](assets/images/screenshot.jpg)
     
 
 ## Credits
